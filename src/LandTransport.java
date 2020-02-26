@@ -2,6 +2,7 @@ public abstract class LandTransport {
     private int maxSpeed;
     private String color;
 
+    public String showInfo() {return "Max speed = " + maxSpeed + ", color = " + color;}
     public int getMaxSpeed() {
         return maxSpeed;
     }

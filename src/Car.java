@@ -8,7 +8,10 @@ public abstract class Car extends LandTransport {
     public void setSteeringWheelPosition(String steeringWheelPosition) {
         this.steeringWheelPosition = steeringWheelPosition;
     }
-
+    public String showInfo()
+    {
+        return super.showInfo() + ", Steering wheel = " + steeringWheelPosition;
+    }
     public Car(int maxSpeed, String color, String steeringWheelPosition) {
         super(maxSpeed, color);
         this.steeringWheelPosition = steeringWheelPosition;
