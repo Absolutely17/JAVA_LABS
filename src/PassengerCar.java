@@ -14,9 +14,10 @@ public abstract class PassengerCar extends Car {
     {
         return super.showInfo() + ", Max passengers = " + maxPassengers + ", Fuel type = " + typeFuel;
     }
-    public PassengerCar(int maxSpeed, String color, String steeringWheelPosition, int maxPassengers, String typeFuel) {
-        super(maxSpeed, color, steeringWheelPosition);
+
+    public PassengerCar(int maxSpeed, String color, double price, String steeringWheelPosition, int maxPassengers, String typeFuel) {
+        super(maxSpeed, color, price, steeringWheelPosition);
         this.maxPassengers = maxPassengers;
-        this.typeFuel=typeFuel;
+        this.typeFuel = typeFuel;
     }
 }

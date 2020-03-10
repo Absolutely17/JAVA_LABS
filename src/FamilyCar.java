@@ -22,8 +22,9 @@ public class FamilyCar extends PassengerCar{
     {
         return super.showInfo() + ", Volume trunk = " + trunkVolume + ", Model = " + model;
     }
-    public FamilyCar(int maxSpeed, String color, String steeringWheelPosition, int maxPassengers, String typeFuel, int trunkVolume, String model) {
-        super(maxSpeed, color, steeringWheelPosition, maxPassengers, typeFuel);
+
+    public FamilyCar(int maxSpeed, String color, double price, String steeringWheelPosition, int maxPassengers, String typeFuel, int trunkVolume, String model) {
+        super(maxSpeed, color, price, steeringWheelPosition, maxPassengers, typeFuel);
         this.trunkVolume = trunkVolume;
         this.model = model;
     }

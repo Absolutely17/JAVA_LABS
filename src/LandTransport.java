@@ -1,8 +1,9 @@
 public abstract class LandTransport {
     private int maxSpeed;
     private String color;
+    private double price;
 
-    public String showInfo() {return "Max speed = " + maxSpeed + ", color = " + color;}
+    public String showInfo() {return "Max speed = " + maxSpeed + ", color = " + color + ", price = " + price;}
     public int getMaxSpeed() {
         return maxSpeed;
     }
@@ -19,8 +20,19 @@ public abstract class LandTransport {
         this.color = color;
     }
 
-    public LandTransport(int maxSpeed,  String color) {
-        this.maxSpeed = maxSpeed;
-        this.color=color;
+    public double getPrice() {
+        return price;
     }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public LandTransport(int maxSpeed, String color, double price) {
+        this.maxSpeed = maxSpeed;
+        this.color = color;
+        this.price = price;
+    }
+    public LandTransport()
+    {}
 }

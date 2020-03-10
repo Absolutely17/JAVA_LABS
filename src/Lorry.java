@@ -18,8 +18,8 @@ public abstract class Lorry extends  Car {
         isRecliningCab = recliningCab;
     }
 
-    public Lorry(int maxSpeed, String color, String steeringWheelPosition, int maxTransportedWeight, boolean isRecliningCab) {
-        super(maxSpeed, color, steeringWheelPosition);
+    public Lorry(int maxSpeed, String color, double price, String steeringWheelPosition, int maxTransportedWeight, boolean isRecliningCab) {
+        super(maxSpeed, color, price, steeringWheelPosition);
         this.maxTransportedWeight = maxTransportedWeight;
         this.isRecliningCab = isRecliningCab;
     }

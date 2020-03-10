@@ -12,8 +12,9 @@ public abstract class Car extends LandTransport {
     {
         return super.showInfo() + ", Steering wheel = " + steeringWheelPosition;
     }
-    public Car(int maxSpeed, String color, String steeringWheelPosition) {
-        super(maxSpeed, color);
+
+    public Car(int maxSpeed, String color, double price, String steeringWheelPosition) {
+        super(maxSpeed, color, price);
         this.steeringWheelPosition = steeringWheelPosition;
     }
 }

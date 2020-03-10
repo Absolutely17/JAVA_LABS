@@ -22,8 +22,9 @@ public class SUVCar extends PassengerCar {
     {
         return super.showInfo() + ", Model = " + model + ", Type transmission = " + typeTransmission;
     }
-    public SUVCar(int maxSpeed, String color, String steeringWheelPosition, int maxPassengers, String typeFuel, String model, String typeTransmission) {
-        super(maxSpeed, color, steeringWheelPosition, maxPassengers, typeFuel);
+
+    public SUVCar(int maxSpeed, String color, double price, String steeringWheelPosition, int maxPassengers, String typeFuel, String model, String typeTransmission) {
+        super(maxSpeed, color, price, steeringWheelPosition, maxPassengers, typeFuel);
         this.model = model;
         this.typeTransmission = typeTransmission;
     }
