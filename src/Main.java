@@ -45,5 +45,10 @@ public class Main {
         car = new GPS(car);
         System.out.println(car.showInfo());
         System.out.println("Цена: " + car.getPrice());
+        Store store = new Store();
+        Producer producer = new Producer(store);
+        Consumer consumer = new Consumer(store);
+        new Thread(producer).start();
+        new Thread(consumer).start();
     }
 }
