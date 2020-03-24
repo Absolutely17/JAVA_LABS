@@ -1,3 +1,5 @@
+package Hierarchy;
+
 public abstract class PassengerCar extends Car {
     public int maxPassengers;
     private String typeFuel;

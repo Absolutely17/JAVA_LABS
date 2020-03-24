@@ -1,3 +1,7 @@
+package Decorator;
+
+import Hierarchy.LandTransport;
+
 public class Conditioner extends Decorator {
 
     LandTransport car;
@@ -13,5 +17,11 @@ public class Conditioner extends Decorator {
     public String showInfo()
     {
         return car.showInfo() + ", Conditioner";
+    }
+
+    @Override
+    public void assemblyCar()
+    {
+        ;
     }
 }

@@ -1,3 +1,5 @@
+package Hierarchy;
+
 public abstract class Lorry extends  Car {
     private int maxTransportedWeight;
     private boolean isRecliningCab;

@@ -1,7 +1,16 @@
+package Hierarchy;
+
+import AbstractFactory.Spare.BrakeSystem;
+import AbstractFactory.Spare.Engine;
+
 public abstract class LandTransport {
     private int maxSpeed;
     private String color;
     private double price;
+    Engine engine;
+    BrakeSystem brakeSystem;
+
+    public abstract void assemblyCar();
 
     public String showInfo() {return "Max speed = " + maxSpeed + ", color = " + color + ", price = " + price;}
     public int getMaxSpeed() {

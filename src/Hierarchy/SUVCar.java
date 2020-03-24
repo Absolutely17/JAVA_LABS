@@ -1,3 +1,5 @@
+package Hierarchy;
+
 public class SUVCar extends PassengerCar {
     private String model;
     private String typeTransmission;
@@ -27,5 +29,10 @@ public class SUVCar extends PassengerCar {
         super(maxSpeed, color, price, steeringWheelPosition, maxPassengers, typeFuel);
         this.model = model;
         this.typeTransmission = typeTransmission;
+    }
+    @Override
+    public void assemblyCar()
+    {
+        ;
     }
 }

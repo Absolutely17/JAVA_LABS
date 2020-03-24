@@ -1,3 +1,7 @@
+package Decorator;
+
+import Hierarchy.LandTransport;
+
 public class GPS extends Decorator {
 
     LandTransport car;
@@ -12,5 +16,11 @@ public class GPS extends Decorator {
 
     public String showInfo(){
         return car.showInfo() + ", GPS";
+    }
+
+    @Override
+    public void assemblyCar()
+    {
+        ;
     }
 }
