@@ -3,9 +3,10 @@ import FactoryMethod.AutoStore;
 import FactoryMethod.LADA_Store;
 import Hierarchy.*;
 import Threads.*;
+import iterator.garage.*;
+import iterator.model.GarageArray;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -75,6 +76,24 @@ public class Main {
         //Abstract factory test
         LandTransport carForIlya;
         carForIlya = ladaStore.orderCar("Priora");
-        
+
+        //Iterator test
+        LinkedList<FamilyCar> firstGarageCars = new LinkedList<>();
+        firstGarageCars.add(new FamilyCar(160, "black", 54546, "right", 6, "benzine",500, "Mercedes-Benz CLA"));
+        firstGarageCars.add(new FamilyCar(189, "white", 54546, "right", 6, "benzine",500, "Mercedes-Benz CLA"));
+        FirstGarage firstGarage = new FirstGarage(firstGarageCars);
+
+        ArrayList<FamilyCar> secondGarageCars = new ArrayList<>();
+        secondGarageCars.add(new FamilyCar(160, "black", 54546, "left", 6, "diezel",500, "Audi A4"));
+        secondGarageCars.add(new FamilyCar(189, "white", 54546, "right", 6, "benzine",500, "Granta"));
+        SecondGarage secondGarage = new SecondGarage(secondGarageCars);
+
+        FamilyCar[] thirdGarageCars = new FamilyCar[2];
+        thirdGarageCars[0]= new FamilyCar(160, "black", 54546, "left", 6, "diezel",500, "Audi R4");
+        thirdGarageCars[1] = new FamilyCar(189, "white", 54546, "right", 6, "benzine",500, "Priora");
+        ThirdGarage thirdGarage = new ThirdGarage(thirdGarageCars);
+
+        GarageArray garages = new GarageArray("Вершинина", "Кировский", firstGarage, secondGarage, thirdGarage);
+        garages.showInfo();
     }
 }
